@@ -5,72 +5,302 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cihan Demir - Portfolyo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <img src="profil.jpg" alt="Cihan Demir Profil Fotoğrafı" class="profil-resim">
-        <h1>Merhaba, Ben Cihan!</h1>
-        <p>Bilgisayar Mühendisi</p>
-    </header>
+    <div class="container">
+        <!-- Ana Sayfa / Profil Bölümü -->
+        <section id="home" class="section">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="profile.jpg" alt="Cihan Demir">
+                </div>
+                <div class="profile-content">
+                    <h1 class="main-title">Merhaba, ben Cihan!</h1>
+                    <h2 class="subtitle">BİLGİSAYAR MÜHENDİSİ</h2>
+                    <p class="bio">
+                        Ondokuz Mayıs Üniversitesi Bilgisayar Mühendisliği bölümünden mezun, Kastamonu Üniversitesi'nde Bilgisayar Mühendisliği yüksek lisans eğitimine sağlıkta yapay zeka alanında devam ediyorum.
+                    </p>
+                    <p class="bio">
+                        Okumayı, öğrenmeyi, düşünmeyi ve kod yazmayı severim. Merakla keşfeder, tutkuyla üretirim.
+                    </p>
+                </div>
+            </div>
 
-    <section class="profile">
-        <h2>Profil</h2>
-        <p>Ondokuz Mayıs Üniversitesi Bilgisayar Mühendisliği bölümünden mezun, Kastamonu Üniversitesi'nde yüksek lisans eğitimime sağlıkta yapay zeka alanında devam ediyorum.</p>
-        <p>Okumayı, öğrenmeyi, düşünmeyi ve kod yazmayı severim. Merakla keşfeder, tutkuyla üretirim.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h2 class="section-title">PROFİL</h2>
+                        <div class="profile-info">
+                            <h3>TAM İSİM</h3>
+                            <p>Cihan DEMİR</p>
+                        </div>
+                        <div class="profile-info">
+                            <h3>EMAİL</h3>
+                            <p>cihand7@outlook.com</p>
+                        </div>
+                        <div class="profile-info">
+                            <h3>TELEFON</h3>
+                            <p>+90 530 449 92 37</p>
+                        </div>
+                        <div class="profile-info">
+                            <h3>SOSYAL MEDYA</h3>
+                            <div class="social-links">
+                                <a href="#" target="_blank">Linkedin</a>
+                                <a href="#" target="_blank">HackerRank</a>
+                                <a href="#" target="_blank">Medium</a>
+                                <a href="#" target="_blank">Github</a>
+                                <a href="#" target="_blank">Kaggle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <ul class="contact-info">
-            <li><strong>İsim:</strong> Cihan Demir</li>
-            <li><strong>Email:</strong> cihand7@outlook.com</li>
-            <li><strong>Telefon:</strong> +90 530 449 92 37</li>
-        </ul>
+        <!-- Eğitim Bölümü -->
+        <section id="education" class="section">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h2 class="section-title">EĞİTİM</h2>
+                    </div>
+                </div>
 
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/demircihan" target="_blank">LinkedIn</a>
-            <a href="https://github.com/cdemir7" target="_blank">GitHub</a>
-            <a href="https://www.hackerrank.com/profile/cihandemir7" target="_blank">HackerRank</a>
-            <a href="https://medium.com/@cihandemir7" target="_blank">Medium</a>
-            <a href="https://www.kaggle.com/cihand7" target="_blank">Kaggle</a>
-        </div>
-    </section>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="education-title">BİLGİSAYAR MÜHENDİSLİĞİ YÜKSEK LİSANS</h3>
+                        <div class="education-info">
+                            <div class="university-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <p class="university">Kastamonu Üniversitesi Bilgisayar Mühendisliği</p>
+                            <p class="year">2024-2026</p>
+                        </div>
+                        <p class="education-desc">
+                            Makine Öğrenmesi, Biyoinformatikte Derin Öğrenme, Gömülü Sistemler, Görüntü İşleme derslerini tamamladım.
+                        </p>
+                        <p class="education-desc">
+                            TEKNOFEST Uluslararası İnsansız Hava Aracı kategorisi ve Havacılıkta Yapay Zeka kategorisi takımlarında çalışmalar yaptım.
+                        </p>
+                    </div>
+                </div>
 
-    <section class="education">
-        <h2>Eğitim</h2>
-        <ul>
-            <li><strong>Yüksek Lisans:</strong> Kastamonu Üniversitesi - Bilgisayar Mühendisliği (2024-2026)</li>
-            <li><strong>Lisans:</strong> Ondokuz Mayıs Üniversitesi - Bilgisayar Mühendisliği (2019-2023)</li>
-            <li><strong>Lise:</strong> Şehit Mustafa Kaymakçı Anadolu Lisesi (2018-2019)</li>
-            <li><strong>Lise:</strong> Çankırı Fen Lisesi (2015-2018)</li>
-        </ul>
-    </section>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="education-title">BİLGİSAYAR MÜHENDİSLİĞİ LİSANS</h3>
+                        <div class="education-info">
+                            <div class="university-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <p class="university">Ondokuz Mayıs Üniversitesi Bilgisayar Mühendisliği</p>
+                            <p class="year">2019-2023</p>
+                        </div>
+                        <p class="education-desc">
+                            Makine Öğrenmesi, Algoritmalar, İşletim sistemleri, Veri Yapıları, Ayrık matematik gibi bilgisayar bilimlerinin ve yazılım teknolojilerinin temellerini oluşturan derslerini başarıyla tamamladım.
+                        </p>
+                        <p class="education-desc">
+                            TEKNOFEST Orta İrtifa Roket Kategorisi takımında çalışmalar yaptım.
+                        </p>
+                    </div>
+                </div>
 
-    <section class="experience">
-        <h2>İş Tecrübesi</h2>
-        <p><strong>Yeşilırmak Elektrik Dağıtım A.Ş - Stajyer Mühendis (Temmuz 2023)</strong></p>
-        <p>Ağ ve siber güvenlik, Blockchain entegrasyonu gibi alanlarda deneyim kazandım.</p>
-    </section>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="education-title">ŞEHİT MUSTAFA KAYMAKÇI ANADOLU LİSESİ</h3>
+                        <div class="education-info">
+                            <div class="university-icon">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <p class="university">Ortaöğretim</p>
+                            <p class="year">2018-2019</p>
+                        </div>
+                    </div>
+                </div>
 
-    <section class="projects">
-        <h2>Projeler</h2>
-        <ul>
-            <li><strong>TEKNOFEST Uluslararası İnsansız Hava Aracı Yarışması</strong> - Görüntü işleme ve YOLO ile hedef tespiti (Jetson Nano, Python)</li>
-            <li><strong>TEKNOFEST Havacılıkta Yapay Zeka</strong> - Nesne tespiti ve GPS tahmini (OpenCV, YOLO)</li>
-            <li><strong>Beyin Tümörü Sınıflandırıcısı</strong> - MRI görüntülerinden sınıflandırma (Tensorflow, Keras)</li>
-            <li><strong>TEKNOFEST Orta İrtifa Roket Yarışması Yer İstasyonu Yazılımı</strong> - Telemetri verisi analizi (C#)</li>
-        </ul>
-    </section>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="education-title">ÇANKIRI FEN LİSESİ</h3>
+                        <div class="education-info">
+                            <div class="university-icon">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <p class="university">Ortaöğretim</p>
+                            <p class="year">2015-2018</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="skills">
-        <h2>Teknik Beceriler</h2>
-        <ul>
-            <li><strong>Programlama:</strong> Python (%80), Java (%65), C# (%60)</li>
-            <li><strong>Makine Öğrenmesi:</strong> Tensorflow, Pytorch, Keras</li>
-            <li><strong>Görüntü İşleme:</strong> OpenCV, YOLO, Bilgisayarlı Görü</li>
-            <li><strong>Diğer:</strong> Linux, Git, Docker, Raspberry Pi, Jetson Nano</li>
-        </ul>
-    </section>
+        <!-- İş Tecrübesi Bölümü -->
+        <section id="experience" class="section">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h2 class="section-title">İŞ TECRÜBESİ</h2>
+                    </div>
+                </div>
 
-    <footer>
-        <p>Teşekkürler!</p>
-    </footer>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="experience-title">YEŞİLIRMAK ELEKTRİK DAĞITIM A.Ş</h3>
+                        <div class="experience-info">
+                            <p class="position">Stajer Mühendis</p>
+                            <p class="date">Temmuz 2023</p>
+                        </div>
+                        <p class="experience-desc">
+                            Stajım süresince ağ ve siber güvenlik alanlarında önemli deneyimler kazandım. Bu süre zarfında güçlü bir temel oluşturmak için kapsamlı bir eğitim aldım. Ayrıca ekibimle birlikte Blockchain teknolojisine odaklanmak için iş birliği yaptım ve dört farklı cihazı entegre ederek Ethereum ağı oluşturma sürecini başarıyla tamamladım. Bu deneyim hem teknik bilgimi güçlendirdi hem de ekip işbirliklerinde aktif rol almamı sağladı.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projeler Bölümü -->
+        <section id="projects" class="section">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h2 class="section-title">PROJELER</h2>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="project-title">TEKNOFEST ULUSLARARSI İNSANSIZ HAVA ARACI YARIŞMASI SERBEST GÖREV KATEGORİSİ</h3>
+                        <p class="project-desc">
+                            Görüntü işleme ve derin öğrenme teknikleri kullanılarak hava-kara taarruz sistemleri için nesne tespiti ve hedef tanıma modeli geliştirilmektedir. Bu sistemde, gerçek zamanlı görüntü analizi için NVIDIA Jetson Nano gibi düşük güçlü gömülü yapay zeka cihazları kullanılmakta ve YOLO algoritması ile hızlı ve doğru tespitler yapılmaktadır. Model, savunma sanayiinde insansız hava araçları (İHA) ve kara araçlarının hedefleme sistemlerinde kullanılmak üzere optimize edilmektedir.
+                        </p>
+                        <p class="project-tech">Jetson Nano, Linux, YOLO, Python</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="project-title">TEKNOFEST HAVACILILIKTA YAPAY ZEKA</h3>
+                        <p class="project-desc">
+                            Bu çalışmada, görüntü işleme ve derin öğrenme yöntemleri kullanılarak nesne tespiti ve konum tahmini yapan bir yapay zeka modeli geliştirilmiştir. OpenCV ile görüntüler işlenmekte, YOLO (You Only Look Once) algoritmasıyla gerçek zamanlı nesne tespiti yapılmakta ve tespit edilen nesnelerin konumları üzerinden GPS tahminleri yapılmaktadır. Bu sistem, akıllı şehir uygulamaları, insansız hava araçları (İHA), güvenlik sistemleri ve robotik navigasyon gibi alanlarda kullanılmak üzere optimize edilmektedir.
+                        </p>
+                        <p class="project-tech">OpenCV, YOLO, Nesne Tespiti</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="project-title">BEYİN TÜMÖRÜ SINIFLANDIRICISI</h3>
+                        <p class="project-desc">
+                            Bu projede, MRI görüntülerini kullanarak beyin tümörlerini sınıflandırmak için MobileNetV2 tabanlı derin öğrenme modeli geliştirilmiştir. Model, konvolüsyonel sinir ağları (CNN) ile otomatik teşhis sürecini iyileştirmeyi ve yüksek doğruluk oranlarına ulaşmayı hedeflemektedir.
+                        </p>
+                        <p class="project-tech">Tensorflow, Keras</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="project-title">TEKNOFEST ORTA İRTİFA ROKET YARIŞMASI YER İSTASYONU YAZILIMI TASARIMI</h3>
+                        <p class="project-desc">
+                            Bu projede, roketten elde edilen konum, ivme, basınç, nem ve sıcaklık gibi sensör verilerinin gerçek zamanlı olarak izlenebilmesi için bir yer istasyonu yazılımı geliştirilmiştir. C# programlama dili kullanılarak geliştirilen bu yazılım, roketin uçuş sırasında gönderdiği telemetri verilerini alır, işler ve kullanıcı dostu bir arayüzle görselleştirir. Sistem, eğitim amaçlı roket projelerinde, amatör uzay çalışmaları ve Ar-Ge faaliyetlerinde veri analizi ve güvenli takip için etkin bir çözüm sunmaktadır.
+                        </p>
+                        <p class="project-tech">C#</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teknik Beceriler Bölümü -->
+        <section id="skills" class="section">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h2 class="section-title">TEKNİK BECERİLER</h2>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="skills-title">PROGRAMLAMA DİLLERİ</h3>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <p>Python</p>
+                                <p>%80</p>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <p>Java</p>
+                                <p>%65</p>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <p>C#</p>
+                                <p>%60</p>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="skills-title">MAKİNE ÖĞRENMESİ VE DERİN ÖĞRENME</h3>
+                        <div class="skills-list">
+                            <div class="skills-column">
+                                <ul>
+                                    <li>Tensorflow</li>
+                                    <li>Pytorch</li>
+                                    <li>Keras</li>
+                                    <li>YOLO</li>
+                                </ul>
+                            </div>
+                            <div class="skills-column">
+                                <ul>
+                                    <li>Bilgisayarlı Görü</li>
+                                    <li>Nesne Tespiti ve Takibi</li>
+                                    <li>Scikit-Learn</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="skills-title">GÖRÜNTÜ İŞLEME</h3>
+                        <p>OpenCV</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="skills-title">DİĞER PLATFORMLAR</h3>
+                        <ul class="other-skills">
+                            <li>Linux İşletim Sistemi (Kali, Ubuntu, Debian)</li>
+                            <li>Git</li>
+                            <li>Docker</li>
+                            <li>Raspberry pi ve Jetson Nano</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h2 class="thanks-title">TEŞEKKÜRLER...</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
