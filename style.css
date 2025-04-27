@@ -42,7 +42,7 @@ body {
 
 .profile-image {
     flex: 0 0 300px;
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
 .profile-image img {
