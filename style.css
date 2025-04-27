@@ -21,8 +21,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+   
     padding: 0 20px;
 }
 
@@ -50,6 +49,7 @@ body {
     height: auto;
     border-radius: 50%;
     border: 5px solid var(--primary-color);
+    margin-right: 61px;
 }
 
 .profile-content {
@@ -100,13 +100,14 @@ body {
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: -54px;
-    top: 5px;
+    left: -65px;
+    top: 45px;
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background-color: var(--timeline-color);
-    border: 4px solid var(--primary-color);
+    border: 10px solid var(--primary-color);
+    
 }
 
 .timeline-content {
