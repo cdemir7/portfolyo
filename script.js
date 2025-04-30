@@ -1,25 +1,30 @@
-// Basit JavaScript işlevselliği
 document.addEventListener('DOMContentLoaded', function() {
-    // Sayfa yüklendiğinde animasyon eklemek için
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    
-    timelineItems.forEach((item, index) => {
-        // Gecikme ile animasyon ekle
-        setTimeout(() => {
-            item.classList.add('visible');
-        }, 100 * index);
-    });
-    
-    // Sosyal medya linklerini açmak için (örnek)
-    const socialLinks = document.querySelectorAll('.social-links a');
-    
-    socialLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            // Gerçek linkleri olmadığı için şimdilik engelliyoruz
-            if (link.getAttribute('href') === '#') {
-                e.preventDefault();
-                alert('Bu link henüz aktif değil.');
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const navLinks = sidebar.querySelectorAll('nav ul li a');
+
+    if (menuToggle && sidebar) {
+        menuToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('active');
+        });
+    }
+
+    // Close sidebar when a nav link is clicked (useful on mobile)
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
             }
         });
+    });
+
+    // Optional: Close sidebar if user clicks outside of it
+    document.addEventListener('click', function(event) {
+        const isClickInsideSidebar = sidebar.contains(event.target);
+        const isClickOnMenuToggle = menuToggle.contains(event.target);
+
+        if (!isClickInsideSidebar && !isClickOnMenuToggle && sidebar.classList.contains('active')) {
+            sidebar.classList.remove('active');
+        }
     });
 });
