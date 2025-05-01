@@ -20,38 +20,50 @@
     padding: 0;
     box-sizing: border-box;
 }
+.no-click {
+    pointer-events: none;
+    list-style-type: disc; /* İstersen değiştirebilirsin */
+    padding-left: 20px;
+    margin-top: -15px;
+  }
+  
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background: radial-gradient(circle, white, #a7c6ed);
+    background: linear-gradient(to left, #666666, #213842);
 }
 
 a {
-    color: var(--primary-color);
+    color: #666666;
+    font-weight:700;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--secondary-color);
+    color: #ffffff;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
     color: var(--text-color);
 }
+h1{
+    margin-bottom: 1rem;
+    color: #ffffff99;
+}
 
 h2 {
-    color: #2376d7;
+    color: var(--content-bg-color);
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
 
 h3 {
     font-size: 1.5rem;
-    color: var(--secondary-color);
+    color:#213842;
 }
 
 p {
@@ -78,13 +90,13 @@ header {
 .sidebar {
     width: 250px;
     padding: 2rem 1rem;
-    background-color: var(--content-bg-color);
+    background-color:rgba(255, 255, 255, 0.93) ;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     margin-right: 2rem;
     position: sticky;
-    top: 100px;
-    height: fit-content;
+   
+    height: 32.1875rem;
 }
 
 .content {
@@ -109,7 +121,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: rgba(74, 144, 226, 0.1);
+    background-color: #4a90e2;
 }
 
 /* Timeline */
@@ -119,6 +131,7 @@ nav ul li a:hover {
     margin-bottom: 3rem;
 }
 
+
 .timeline-section::before {
     content: '';
     position: absolute;
@@ -126,23 +139,23 @@ nav ul li a:hover {
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: var(--timeline-color);
+    background-color:#ffffff;
 }
 
 .timeline-icon {
     position: absolute;
-    left: 10px;
+    left: 9px;
     top: 0;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     background-color: var(--icon-bg-color);
-    border: 2px solid var(--icon-border-color);
+    border: 2px solid #333;
     z-index: 1;
 }
 
 .timeline-content {
-    background-color: #a7c6ed;
+    background-color: rgb(255 255 255 / 93%);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -174,14 +187,21 @@ nav ul li a:hover {
     background-color: var(--progress-color);
     border-radius: 5px;
 }
+.horizontal-line {
+    height: 2px;
+    width: 75%;
+    background-color: black;
+    position: absolute;
+    top: 65px;
+  }
+  
 
 /* Footer */
 footer {
-    background-color: var(--content-bg-color);
     padding: 2rem 0;
     text-align: center;
     margin-top: 2rem;
-    border-top: 1px solid var(--border-color);
+    background: linear-gradient(45deg, #00000059, transparent);
 }
 
 /* Responsive Design */
@@ -219,11 +239,11 @@ footer {
 }
 
 .profile-image {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 225px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--primary-color);
+    border: 4px solid #333;
     margin-right: 2rem;
 }
 
@@ -233,14 +253,15 @@ footer {
 
 .profile-name {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: #000000b0;
     margin-bottom: 0.5rem;
 }
 
 .profile-title {
     font-size: 1.2rem;
-    color: var(--light-text-color);
+    color: rgb(18, 18, 18);
     margin-bottom: 1rem;
+    font-weight: 500;
 }
 
 /* Social Media Icons */
@@ -267,9 +288,7 @@ footer {
 }
 
 /* Add skill bars */
-.skill-container {
-    margin-top: 1.5rem;
-}
+
 .skill-name {
     display: inline-block;  /* Her span öğesini yan yana sıralar */
     margin-right: 10px;      /* Öğeler arasında boşluk bırakır */
@@ -295,8 +314,9 @@ footer {
 
 .btn-outline {
     background-color: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    border: 3px solid #666666;
+    color: #666666;
+    font-weight: 700;
 }
 
 .btn-outline:hover {
@@ -313,6 +333,7 @@ footer {
     cursor: pointer;
     color: var(--primary-color);
 }
+
 
 @media (max-width: 768px) {
     .menu-btn {
