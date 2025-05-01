@@ -27,4 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
             sidebar.classList.remove('active');
         }
     });
+    document.querySelector(".btn.btn-outline").addEventListener("click", function () {
+        const link = document.createElement("a");
+        link.href = "other/Cihan-Demir-CV.pdf";  
+        link.download = "Cihan-Demir-CV.pdf";    
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
 });
