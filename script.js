@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.getElementById('menu-toggle');
     const sidebar = document.getElementById('sidebar');
     const navLinks = sidebar.querySelectorAll('nav ul li a');
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Sidebar Toggle
     if (menuToggle && sidebar) {
-        menuToggle.addEventListener('click', function() {
+        menuToggle.addEventListener('click', function () {
             sidebar.classList.toggle('active');
         });
     }
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close sidebar on click outside
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         const isClickInsideSidebar = sidebar.contains(event.target);
         const isClickOnMenuToggle = menuToggle.contains(event.target);
 
@@ -31,16 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // CV Download Fix
-    document.querySelector(".btn.btn-outline").addEventListener("click", function () {
-        const link = document.createElement("a");
-        // Corrected filename from "Cihan-Demir-CV.pdf" to "CV-Cihan-Demir.pdf" as found in directory listing
-        link.href = "other\Cihan-Demir-CV.pdf";  
-        link.download = "other\Cihan-Demir-CV.pdf";    
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    });
+
 
     // Dark/Light Mode Toggle
     const currentTheme = localStorage.getItem('theme');
@@ -52,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    themeToggle.addEventListener('click', function() {
+    themeToggle.addEventListener('click', function () {
         let theme = 'light';
         if (document.documentElement.getAttribute('data-theme') !== 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
