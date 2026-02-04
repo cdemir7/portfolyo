@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector(".btn.btn-outline").addEventListener("click", function () {
         const link = document.createElement("a");
         // Corrected filename from "Cihan-Demir-CV.pdf" to "CV-Cihan-Demir.pdf" as found in directory listing
-        link.href = "other/Cihan-Demir-CV.pdf";  
-        link.download = "Cihan-Demir-CV.pdf";    
+        link.href = "other\Cihan-Demir-CV.pdf";  
+        link.download = "other\Cihan-Demir-CV.pdf";    
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
