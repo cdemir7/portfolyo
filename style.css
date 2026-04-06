@@ -220,6 +220,7 @@ nav ul li a:hover {
     margin-bottom: 0.5rem;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -543,12 +544,12 @@ footer h1 {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    background-color: var(--primary-color);
-    color: white;
+    background-color: #2563eb; /* Belirgin Mavi */
+    color: #ffffff !important; /* Beyaz Yazı */
     font-size: 0.75rem;
     font-weight: 700;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px; /* Kutucuk görünümü (hap yerine dikdörtgen) */
     margin-bottom: 0.5rem;
     letter-spacing: 0.5px;
     text-transform: uppercase;
