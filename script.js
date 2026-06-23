@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const sidebar = document.getElementById('sidebar');
     const navLinks = sidebar ? sidebar.querySelectorAll('nav ul li a') : [];
     const themeToggle = document.getElementById('theme-toggle');
-    const icon = themeToggle ? themeToggle.querySelector('i') : null;
+    const icon = document.getElementById('theme-icon');
 
     const setMenuState = (isOpen) => {
         if (menuToggle) {
@@ -49,8 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (currentTheme && icon) {
         document.documentElement.setAttribute('data-theme', currentTheme);
         if (currentTheme === 'dark') {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
+            icon.textContent = '☀';
             themeToggle.setAttribute('aria-pressed', 'true');
         }
     }
@@ -60,14 +59,12 @@ document.addEventListener('DOMContentLoaded', function () {
             let theme = 'light';
             if (document.documentElement.getAttribute('data-theme') !== 'dark') {
                 document.documentElement.setAttribute('data-theme', 'dark');
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
+                icon.textContent = '☀';
                 theme = 'dark';
                 themeToggle.setAttribute('aria-pressed', 'true');
             } else {
                 document.documentElement.setAttribute('data-theme', 'light');
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
+                icon.textContent = '☾';
                 themeToggle.setAttribute('aria-pressed', 'false');
             }
             localStorage.setItem('theme', theme);
@@ -81,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
         threshold: 0.1
     };
 
-    const sections = document.querySelectorAll('.timeline-section, .profile-header');
+    const sections = document.querySelectorAll('.timeline-section:not(:first-of-type)');
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (reduceMotion) {
@@ -104,4 +101,12 @@ document.addEventListener('DOMContentLoaded', function () {
         section.classList.add('fade-in-section');
         observer.observe(section);
     });
+
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js').catch(() => {
+                // Ignore registration errors to avoid blocking main experience.
+            });
+        });
+    }
 });
