@@ -72,41 +72,57 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Micro Animations (Scroll Observer)
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
+    const initObservers = () => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const sections = document.querySelectorAll('.timeline-section:not(:first-of-type)');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (reduceMotion) {
+            sections.forEach(section => {
+                section.classList.add('visible');
+            });
+            return;
+        }
+
+        const observer = new IntersectionObserver((entries, observerRef) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observerRef.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            section.classList.add('fade-in-section');
+            observer.observe(section);
+        });
     };
 
-    const sections = document.querySelectorAll('.timeline-section:not(:first-of-type)');
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (reduceMotion) {
-        sections.forEach(section => {
-            section.classList.add('visible');
-        });
-        return;
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(initObservers, { timeout: 600 });
+    } else {
+        setTimeout(initObservers, 0);
     }
-
-    const observer = new IntersectionObserver((entries, observerRef) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observerRef.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    sections.forEach(section => {
-        section.classList.add('fade-in-section');
-        observer.observe(section);
-    });
 
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('./sw.js').catch(() => {
-                // Ignore registration errors to avoid blocking main experience.
-            });
+            const registerSw = () => {
+                navigator.serviceWorker.register('./sw.js').catch(() => {
+                    // Ignore registration errors to avoid blocking main experience.
+                });
+            };
+
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(registerSw, { timeout: 1500 });
+            } else {
+                setTimeout(registerSw, 0);
+            }
         });
     }
 });

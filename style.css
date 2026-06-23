@@ -12,7 +12,7 @@
     --border-color: #e0e0e0;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     --timeline-line: #e0e0e0;
-    --transition: all 0.3s ease;
+    --transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 [data-theme="dark"] {
@@ -199,12 +199,11 @@ nav ul li a:hover {
     box-shadow: var(--shadow);
     width: 100%;
     /* Fix fixed width issue */
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 .timeline-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
 }
 
 /* Profile Section */
@@ -224,11 +223,11 @@ nav ul li a:hover {
     border: 2px solid var(--primary-color);
     box-shadow: var(--shadow);
     flex-shrink: 0;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 .profile-image:hover {
-    transform: scale(1.05) rotate(2deg);
+    transform: scale(1.02);
 }
 
 .profile-name {
@@ -276,7 +275,7 @@ nav ul li a:hover {
     /* Subtle bg */
     border-radius: 50%;
     color: var(--heading-color);
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     border: 1px solid var(--border-color);
     font-size: 0.75rem;
     font-weight: 700;
@@ -513,15 +512,13 @@ nav ul li a:focus-visible,
     font-weight: 600;
     border: 1px solid var(--border-color);
     transition: var(--transition);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .tag:hover {
     background-color: var(--primary-color);
     color: white;
     border-color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
 }
 
 /* Certificate Meta Styles */

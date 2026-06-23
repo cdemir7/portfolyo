@@ -37,13 +37,23 @@
 
     <meta name="google-site-verification" content="zbHYhT_qnZmz-wuk8cFKD3aTppfm5-63dxIUDSBZmS8" />
 
-    <!-- CSS -->
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="style.css">
-    </noscript>
+    <script>
+        (function () {
+            try {
+                var savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark' || savedTheme === 'light') {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+            } catch (e) {
+                // Ignore storage errors.
+            }
+        })();
+    </script>
 
-    <script src="script.js?v=1.3" defer></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css?v=1.4">
+
+    <script src="script.js?v=1.4" defer></script>
 
     <link rel="preload" href="other/profile.webp" as="image" type="image/webp" fetchpriority="high">
 </head>
