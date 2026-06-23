@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cihan Demir | Bilgisayar Mühendisi & Yapay Zeka Uzmanı</title>
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Cihan Demir",
+        "url": "https://cdemir7.github.io/portfolyo/",
+        "jobTitle": "Yapay Zeka Mühendisi",
+        "sameAs": [
+            "https://github.com/cdemir7",
+            "https://linkedin.com/in/demircihan"
+        ]
+    }
+    </script>
+
     <meta name="description" content="Cihan Demir'in kişisel portfolyosu. Bilgisayar Mühendisliği, Yapaya Zeka Mühendisi">
     <meta name="keywords" content="Cihan Demir, bilgisayar mühendisi, portfolyo, yapay zeka mühendisi">
     <meta name="author" content="Cihan Demir">
@@ -29,23 +43,16 @@
         rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css?v=1.2"></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="script.js?v=1.2" defer></script>
+
+    <link rel="preload" href="foto.webp" as="image">
 </head>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Cihan Demir",
-  "url": "https://cdemir7.github.io/portfolyo/",
-  "jobTitle": "Web Geliştirici",
-  "sameAs": [
-    "https://github.com/cdemir7",
-    "https://linkedin.com/in/demircihan"
-  ]
-}
-</script>
+
 
 <body>
 
@@ -93,7 +100,10 @@
                 <div class="timeline-icon"></div>
                 <div class="timeline-content">
                     <div class="profile-header">
-                        <img src="other/profile.jpg" alt="Cihan Demir Profil Resmi" class="profile-image">
+                        <picture>
+                            <source srcset="other/profile.webp" type="image/webp">
+                            <img src="other/profile.jpg" alt="Profil" loading="lazy" width="400" height="400">
+                        </picture>
                         <div class="profile-info">
                             <h2 class="profile-name">Cihan Demir</h2>
                             <p class="profile-title">BİLGİSAYAR MÜHENDİSİ & YAPAY ZEKA MÜHENDİSİ</p>
@@ -476,8 +486,6 @@
     <footer>
         <h1>© 2026 Cihan Demir</h1>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 
 </html>
