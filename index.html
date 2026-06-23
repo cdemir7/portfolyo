@@ -49,7 +49,7 @@
 
     <script src="script.js?v=1.2" defer></script>
 
-    <link rel="preload" href="foto.webp" as="image">
+    <link rel="preload" href="other/profile.webp" as="image" fetchpriority="high">
 </head>
 
 
@@ -102,7 +102,8 @@
                     <div class="profile-header">
                         <picture>
                             <source srcset="other/profile.webp" type="image/webp">
-                            <img src="other/profile.jpg" alt="Profil" loading="lazy" width="400" height="400">
+                            <img src="other/profile.jpg" alt="Profil" class="profile-image" width="220" height="280"
+                                fetchpriority="high" decoding="async">
                         </picture>
                         <div class="profile-info">
                             <h2 class="profile-name">Cihan Demir</h2>
